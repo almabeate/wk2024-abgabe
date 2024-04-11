@@ -1,0 +1,29 @@
+[
+    {
+        "Bundesland / Messnetz": "Sachsen",
+        "Stationscode": "DESN049",
+        "Stationsname": "Carlsfeld",
+        "Stationsumgebung": "ländlich abgelegen",
+        "Art der Station": "Hintergrund",
+        "Jahresmittelwert in µg/m³": 6.8,
+        "Zahl der Tageswerte über 50 µg/m3": 0
+    },
+    {
+        "Bundesland / Messnetz": "Thüringen",
+        "Stationscode": "DETH027",
+        "Stationsname": "Neuhaus",
+        "Stationsumgebung": "ländlich abgelegen",
+        "Art der Station": "Hintergrund",
+        "Jahresmittelwert in µg/m³": 7.6,
+        "Zahl der Tageswerte über 50 µg/m3": 0
+    },
+    {
+        "Bundesland / Messnetz": "Thüringen",
+        "Stationscode": "DETH042",
+        "Stationsname": "Possen",
+        "Stationsumgebung": "ländlich abgelegen",
+        "Art der Station": "Hintergrund",
+        "Jahresmittelwert in µg/m³": 9.2,
+        "Zahl der Tageswerte über 50 µg/m3": 0
+    }
+]
