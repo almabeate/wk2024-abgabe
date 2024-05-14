@@ -1,2 +1,2 @@
 # wk2024-abgabe
-Übung 1
+Alle Übungen
