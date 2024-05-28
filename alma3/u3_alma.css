@@ -1,0 +1,50 @@
+
+h3, p, div, label {
+  padding-left: 10px; /*bei fast allen Elementen wird ein Abstand zum Rand eingestellt*/
+}
+.main { /*Alle Haupt-Divider bekommen die selbe Gestaltung*/
+  border-color: rgb(152, 177, 222);
+  border-style: outset;
+  border-radius: 10px;
+  border-width:4px; 
+}
+#jsonNoErr {
+  display: none;
+}
+#jsonErr {
+  display: block; 
+  border-color: rgb(224, 105, 109);
+  background-color: rgba(224, 105, 109, 0.5);
+  border-style: outset;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3{
+  text-align: center;
+}
+
+table{
+  background-color: rgba(152, 177, 222, 0.25);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-decoration: underline;
+  background-color: rgba(152, 177, 222, 0.5);
+}
+
+th, td {
+  border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+}
+
+tr:hover td{ /*So wird die ganze Zeile dunkler*/
+  background-color:rgba(152, 177, 222, 0.5);
+}

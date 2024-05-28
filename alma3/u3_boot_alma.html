@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alma Wettig">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart.js Biblotek wurde eingebunden  -->
+    <script defer src="u3_boot_alma.js"></script>
+    
+    <!-- CSS Bootstrap File -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+
+    <title>Webbasierte Karten - Übung 3, mit Bootstrap SoSe 2024</title>
+
+    
+</head>
+<body class="px-2" >
+
+    <h1 class="display-6"> Übung 3, mit Bootstrap</h1> 
+ 
+    <ul class="nav nav-bar">
+        <li class="nav-item">
+          <a class="rounded-pill text-light bg-dark nav-link active" aria-current="page" href="u3_boot_alma.html">Daten-Eingabe</a>
+        </li>
+        <li class="nav-item">
+          <a class="rounded-pill text-light bg-dark nav-link active" aria-current="page"  href="#">Diagramm</a>
+        </li>
+        <li class="nav-item">
+          <a class="rounded-pill text-light bg-dark nav-link active" aria-current="page" href="#">Tabelle</a>
+        </li>
+        <li class="nav-item">
+          <a class="rounded-pill mb-2 text-light bg-dark nav-link active" aria-current="page"  href="datenschutz.html">Datenschutz</a>
+        </li>
+      </ul>
+
+    <div class="px-1 border border-primary-subtle border-3 rounded"> <!-- Rand um die einzelnen Abschnitte -->
+    
+      <h3 class="display-9"> Eingabeformular</h3>                                                                             <!-- onchange: sobald was hochgeladen wird, wird die Funktion file2text gestartet, mit der die Datei dann lesbar wird -->
+        <form action="/action_page.php" id="inputForm"> 
+
+            <p>Bitte laden Sie eine Json-Datei mit den 10 Städten hoch:</p> <!-- -->
+            <input id ="json" type="file" required><br><br> <!--Die Datei ist nötig für die weiteren Schritte, daher: "required" (man kann nicht weitermachen, ohne etwas hochgeladen zu haben) -->
+              <div id="jsonErr" class="d-none bg-danger rounded text-light px-1"> <!-- So kann man von unsichtbar zu sichtbar umstellen-->
+                <p>Die ausgewählte Datei ist keine (Geo-)JSON-Datei!</p>
+              </div>
+
+            <p> Bitte geben Sie nun die Daten zu der betreffenden Stadt ein: </p>
+        
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+              </div>
+              <input id="fname" type="text" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-number" id="inputGroup-sizing-sm">Breitengrad</span>
+              </div>
+              <input id="l_b" type="number" class="form-control" aria-label="Breitengrad" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-number" id="inputGroup-sizing-sm">Längengrad</span>
+              </div>
+              <input id="l_l" type="number" class="form-control" aria-label="Längengrad" aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            <input class="rounded-pill" type="submit" id = "submit"> <!-- Beim Drücken von "submit " wird ein EventListener aktiviert-->
+        </form>
+    </div>
+
+
+    <br> 
+
+    <div class="px-1 border border-primary-subtle border-3 rounded">
+        <h3 class="display-9" id = "heading_table">Distanz von der gewählten Stadt zu den größten Städten europas</h3>
+        <p id="table">Bitte geben Sie im Eingabeformular die Daten ein.</p> <!-- Wird alles überschrieben-->
+    </div>
+
+    <br>
+
+    <div class="px-1 border border-primary-subtle border-3 rounded">
+        <h3 class="display-9">Ergebnisse als Balkendiagramm</h3>
+        <p  id="chart">Bitte geben Sie im Eingabeformular die Daten ein.</p>
+        <canvas id="myChart"></canvas> <!-- Freier Platz für das Diagramm -->
+    </div>
+
+
+</body>
+</html>
